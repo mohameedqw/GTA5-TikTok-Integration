@@ -106,7 +106,7 @@ public class GTAVWebhookScript : Script
                     VehicleHash vehicleHash;
                     if (Enum.TryParse<VehicleHash>(command.custom, out vehicleHash))
                     {
-                        spawnedVehicles.Add(World.CreateVehicle(new Model(vehicleHash), Game.Player.Character.Position + Game.Player.Character.ForwardVector * 5));
+                        spawnedVehicles.Add(World.CreateVehicle(new Model(vehicleHash), Game.Player.Character.Position.X, Game.Player.Character.Position.Y, Game.Player.Character.Position.Z + 400
                         Logger.Log("Vehicle spawned: " + command.custom);
                     }
                     else
